@@ -8,6 +8,7 @@ const Default: React.FC = ({ children }) => {
   return (
     <Wrapper>
       <Header />
+
       {children}
     </Wrapper>
   );

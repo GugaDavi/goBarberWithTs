@@ -1,10 +1,10 @@
-const { addBabelPlugin, override } = require("customize-cra");
+const path = require("path");
 
-module.exports = override(
-  addBabelPlugin([
-    "babel-plugin-root-import",
-    {
-      rootPathSuffix: "src"
-    }
-  ])
-);
+module.exports = function override(config) {
+  config.resolve = {
+    ...config.resolve,
+    alias: { "~": path.resolve(__dirname, "src") }
+  };
+
+  return config;
+};

@@ -24,6 +24,9 @@ const reducer = (state = INITIAL_STATE, action: AuthActionsTypes) => {
       case AuthActions.SIGN_UP_SUCCESS:
         draft.loading = false;
         break;
+      case AuthActions.SIGN_OUT:
+        draft.token = undefined;
+        draft.signed = false;
     }
   });
 };

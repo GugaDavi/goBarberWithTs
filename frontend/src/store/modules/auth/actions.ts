@@ -41,3 +41,9 @@ export function signFailure(): AuthActionsTypes {
     type: AuthActions.SIGN_FAILURE
   };
 }
+
+export function signOut(): AuthActionsTypes {
+  return {
+    type: AuthActions.SIGN_OUT
+  };
+}

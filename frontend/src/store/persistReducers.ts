@@ -18,7 +18,7 @@ export default (
     {
       key: "gobarber",
       storage,
-      whitelist: ["auth", "user"]
+      whitelist: ["auth", "profile"]
     },
     reducers
   );
